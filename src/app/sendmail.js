@@ -12,10 +12,10 @@ const limiter = rateLimit({
 const router = express.Router();
 
 router.post('/', limiter, async (req, res, next) => {
-    let { from, name, subject, message } = req.body;
+    let { email, name, subject, message } = req.body;
     try {
         const mailOptions = {
-            from: from,  // sender address
+            from: email,  // sender address
             to: 'speaktoakhilp@gmail.com',   // list of receivers
             subject: `PORTFOLIO - ${subject} - ${name}`, // Subject line
             text: `${message}`, // plain text body
