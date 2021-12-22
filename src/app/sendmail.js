@@ -20,7 +20,7 @@ router.post('/', limiter, async (req, res, next) => {
             subject: `PORTFOLIO - ${subject} - ${name}`, // Subject line
             text: `${message}`, // plain text body
             html: `<b>Hey there! </b><br> 
-            This is ${name} - ${from} <br>
+            This is ${name} - ${email} <br>
             <b>Message: </b> ${message}`
         };
 
